@@ -48,6 +48,7 @@ nav{
     height: 4px;
     background-color: rgb(91, 156, 221);
     margin: 4px;
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width:1024px){
@@ -55,7 +56,6 @@ nav{
         width: 60%;
        }
 }
-
 
 @media screen and (max-width:768px){
     body{
@@ -84,4 +84,25 @@ nav{
 
 .nav-active{
     transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg);
+}
+.toggle .line2{
+    opacity: 0;  
+}
+.toggle .line3{
+    transform: rotate(45deg);
 }
